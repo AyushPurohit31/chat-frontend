@@ -49,7 +49,7 @@ export default function UpgradeModal({ children, fetchMessages, fetchAgain, setF
         },
       };
       const { data } = await axios.put(
-        `/api/chat/groupremove`,
+        `https://web-whatschat-api.onrender.com/api/chat/groupremove`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -85,7 +85,7 @@ export default function UpgradeModal({ children, fetchMessages, fetchAgain, setF
         },
       };
       const { data } = await axios.put(
-        `/api/chat/groupadd`,
+        `https://web-whatschat-api.onrender.com/api/chat/groupadd`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -115,7 +115,7 @@ export default function UpgradeModal({ children, fetchMessages, fetchAgain, setF
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(`https://web-whatschat-api.onrender.com/api/user?search=${search}`, config);
       setLoading(false);
       setSearchResult(data);
     } catch (error) {
@@ -135,7 +135,7 @@ export default function UpgradeModal({ children, fetchMessages, fetchAgain, setF
         },
       };
       const { data } = await axios.put(
-        `/api/chat/rename`,
+        `https://web-whatschat-api.onrender.com/api/chat/rename`,
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
