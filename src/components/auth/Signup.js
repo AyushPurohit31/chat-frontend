@@ -78,7 +78,7 @@ const Signup = () => {
           },
         };
 
-        const {data} = await axios.post("/api/user", {
+        const {data} = await axios.post("https://web-whatschat-api.onrender.com/api/user", {
           name,email,password,pic}, 
           config
           );
