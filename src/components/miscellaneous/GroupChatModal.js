@@ -49,7 +49,7 @@ export default function GroupChatModal() {
         },
       };
 
-      const {data} = await axios.get(`/api/user?search=${search}`, config);
+      const {data} = await axios.get(`https://web-whatschat-api.onrender.com/api/user?search=${search}`, config);
       setLoading(false);
       setSearchResults(data);
     } catch (error) {
@@ -68,7 +68,7 @@ export default function GroupChatModal() {
           },
         };
 
-        const {data} = await axios.post("/api/chat/group", {
+        const {data} = await axios.post("https://web-whatschat-api.onrender.com/api/chat/group", {
           name : groupchatName,
           users : JSON.stringify(selectedUsers.map((u)=>(u._id)))
         }, config);
