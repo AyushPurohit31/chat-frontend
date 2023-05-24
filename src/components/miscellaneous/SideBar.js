@@ -47,7 +47,6 @@ export default function SideBar() {
       const {data} = await axios.get(`https://web-whatschat-api.onrender.com/api/user?search=${search}`, config);
       setLoading(false);
       setSearchResult(data);
-      console.log(searchResult)
     } catch (error) {
       alert(error.message)
     }

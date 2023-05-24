@@ -25,8 +25,6 @@ const Login = () => {
       setLoading(false);
       return;
     }
-  
-    console.log(email, password);
     try {
       const config = {
         headers: {
@@ -39,8 +37,6 @@ const Login = () => {
         { email, password },
         config
       );
-
-      console.log(JSON.stringify(data));
       alert("Login Successful")
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
