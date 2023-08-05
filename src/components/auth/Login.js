@@ -1,5 +1,6 @@
 import { Box, Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from '@mui/material';
 import React, { useState } from 'react'
+import CircularProgress from '@mui/material/CircularProgress';
 import { BiShow , BiHide} from 'react-icons/bi'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -99,7 +100,7 @@ const Login = () => {
         onClick={submitHandler}
         variant="contained"
             size="large"
-        >Login
+        >{(loading)?<CircularProgress color="secondary"/>:"Login"}
         </Button>
         </Box>
     </div>
